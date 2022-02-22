@@ -15,10 +15,11 @@ function createCircle(radius) {
   }
 };
 
-var circle1 = createCircle();
+var circle1 = createCircle(3);
 
 //Write console.log here
-
+console.log("Area is " + Math.round(circle1.area()));
+console.log("Test encapsulation: Radius is " + circle1.radius);// will give nothing because circle1 is out of the function, encapsulation.
 
 //Encapsulation Technique 2: private variables
 
@@ -35,9 +36,11 @@ function createCircle(radius) {
     }
 };
 
-var circle2 = createCircle();
+var circle2 = createCircle(3);
 
 //Write console.log here
+console.log("Radius is " + Math.round(circle2.circumference()));
+console.log("Test encapsulation: Diameter is " + circle2.diameter); // Encapsulation; WILL FAIL
 
 
 </script>
